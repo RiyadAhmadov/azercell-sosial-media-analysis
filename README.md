@@ -40,11 +40,6 @@ Verilənlər **Instagram** və **Facebook** platformalarından toplanmışdır v
 - Openpyxl
 - io
 
-### **Tələb olunan kitabxanalar**
-Aşağıdakı kitabxanaları istifadə etmək üçün yükləyə bilərsiniz:
-```bash
-pip install streamlit plotly pandas openpyxl
-
 ## 📥 Layihə ilə Əlaqə
 Əgər layihə ilə bağlı hər hansı bir sualınız varsa, mənimlə əlaqə saxlayın:
 
