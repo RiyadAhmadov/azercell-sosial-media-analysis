@@ -32,7 +32,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Load dataset
-df = pd.read_excel(r'C:\Users\HP\OneDrive\İş masası\azercell\azercell_app\pages\chatbot.xlsx')
+df = pd.read_excel(r'azercell/azercell_app/pages/chatbot.xlsx')
 
 # Vectorization
 vectorizer = TfidfVectorizer()
