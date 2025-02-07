@@ -1,8 +1,6 @@
-# Azercell Sosial Media Analysis
+# Azercell Telecom LLC - Sosial Şəbəkə Rəylərinin Analizi
 
 !['Azercell'](https://fed.az/upload/news/995493.png)
-
-# Azercell Telecom LLC - Sosial Şəbəkə Rəylərinin Analizi
 
 ## 📚 Layihə Haqqında
 Bu layihə, müştəri rəylərinin analizi vasitəsilə **Azercell Telecom LLC**-nin xidmətlərindəki çatışmazlıqları və inkişaf ehtiyaclarını müəyyən etməyə yönəlib. Layihə, Azercell-in sosial şəbəkələrdəki (instagram/facebook) müştəri rəylərini analiz edərək, xidmət keyfiyyəti haqqında daha dolğun məlumat əldə etməyə kömək edir.
