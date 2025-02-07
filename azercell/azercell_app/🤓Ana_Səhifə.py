@@ -6,11 +6,11 @@ import io
 
 st.set_page_config(page_title="🚀Ana Səhifə", layout="centered")
 
-st.sidebar.image("azercell_telecom_llc_logo.png", use_container_width = True, width = 5)
+st.sidebar.image(r"azercell/azercell_app/azercell_telecom_llc_logo.png", use_container_width = True, width = 5)
 
-data_ins = pd.read_excel('azercell_instagram_comments.xlsx')
-data_face_image = pd.read_excel('azercell_facebook_image_comments.xlsx')
-data_face_video = pd.read_excel('azercell_facebook_video_comments.xlsx')
+data_ins = pd.read_excel(r'azercell/azercell_app/azercell_instagram_comments.xlsx')
+data_face_image = pd.read_excel(r'azercell/azercell_app/azercell_facebook_image_comments.xlsx')
+data_face_video = pd.read_excel(r'azercell/azercell_app/azercell_facebook_video_comments.xlsx')
 data_face = pd.concat([data_face_image,data_face_video]) 
 
 data_ins.columns = ['Hesab Adı','Rəy','Postun Paylaşılma Tarixi','Postun Paylaşılma Saatı','Rəyin Yazılma Tarixi','Paylaşımın Məzmunu','Rəy Bəyənmə','Paylaşım Bəyənmə','Paylaşım']
