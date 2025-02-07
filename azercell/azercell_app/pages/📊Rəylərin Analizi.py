@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="📊Dashboard", layout="centered")
 
-df = pd.read_excel(r'C:\Users\HP\OneDrive\İş masası\azercell\azercell_app\azercell_instagram_customer_reviews.xlsx')
+df = pd.read_excel(r'azercell/azercell_app/azercell_instagram_customer_reviews.xlsx')
 
-st.sidebar.image("azercell_telecom_llc_logo.png", use_container_width = True, width = 5)
+st.sidebar.image(r"azercell/azercell_app/pages/azercell_telecom_llc_logo.png", use_container_width = True, width = 5)
 
 df = df[df['hesab_adı'] != 'azercell']
 df['post_tarix'] = pd.to_datetime(df['post_tarix'], format="%d.%m.%Y").dt.date
