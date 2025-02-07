@@ -5,7 +5,7 @@
 # Azercell Telecom LLC - Sosial Şəbəkə Rəylərinin Analizi
 
 ## 📚 Layihə Haqqında
-Bu layihə, müştəri rəylərinin analizi vasitəsilə **Azercell Telecom LLC**-nin xidmətlərindəki çatışmazlıqları və inkişaf ehtiyaclarını müəyyən etməyə yönəlib. Layihə, Azercell-in sosial şəbəkələrdəki müştəri rəylərini analiz edərək, xidmət keyfiyyəti haqqında daha dolğun məlumat əldə etməyə kömək edir.
+Bu layihə, müştəri rəylərinin analizi vasitəsilə **Azercell Telecom LLC**-nin xidmətlərindəki çatışmazlıqları və inkişaf ehtiyaclarını müəyyən etməyə yönəlib. Layihə, Azercell-in sosial şəbəkələrdəki (instagram/facebook) müştəri rəylərini analiz edərək, xidmət keyfiyyəti haqqında daha dolğun məlumat əldə etməyə kömək edir.
 
 ## 🚀 Layihənin Məqsədi
 - **Problemin Təsviri**: Müştəri rəyləri əsasında Azercell Telecom LLC-nin xidmət keyfiyyətini və müştəri məmnuniyyətini təhlil etmək.  
@@ -52,5 +52,5 @@ Verilənlər **Instagram** və **Facebook** platformalarından toplanmışdır v
 - **Sektor üçün üstünlüklər**: Telekommunikasiya sahəsində daha məlumatlı və müştəri yönümlü qərarların qəbul edilməsini təmin edir.
 
 ## 🎯 Gələcək Planlar
-- Müştəri rəylərinin daha detallı təhlil edilməsi və xidmət sahələrində müştəri məmnuniyyətini artıracaq həllər təklif edilməsi.
-- Şirkətin daha geniş sosial şəbəkələrdəki rəylərini təhlil etmək üçün yeni modellərin tətbiqi.
+- Müştəri rəylərinin daha detallı təhlil edilməsi (sample deyil population ilə işləmə) və xidmət sahələrində müştəri məmnuniyyətini artıracaq həllər təklif edilməsi.
+- Şirkətin daha geniş sosial şəbəkələrdəki rəylərini təhlil etmək üçün yeni modellərin tətbiqi. (əlavə sosial şəbəkələr - Linkedin tag şikayət mesajları)
