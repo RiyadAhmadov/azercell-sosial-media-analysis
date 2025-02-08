@@ -76,7 +76,7 @@ st.markdown(
 
 user_count = f"👤 {df['hesab_adı'].nunique()}"   
 comment_count = f"💭 {df['rəy'].shape[0]}"    
-average_like = f"❤ {df['post_bəyənmə'].mean():.2f}"
+average_like = f"❤ {df['post_bəyənmə'].mean():.0f}"
 
 def metric_card(label, value):
     st.markdown(
@@ -546,7 +546,8 @@ fig11 = px.pie(new, values='rəy_count', names='rəy_tarix_year',
 fig11.update_layout(title_font=dict(size=24))
 st.plotly_chart(fig11)
 
-st.write(f""">Qrafikdən aydın olur ki, məlumat daxilində əksərən <strong style='color: purple;'>f'{new[new['rəy_count'] == new['rəy_count'].max()]['rəy_tarix_year']}' f'{new['rəy_count'].max()}'</strong> ilinə aid qeydlər mövcuddur.""", unsafe_allow_html=True)
+percentage = ((new['rəy_count'].max() / new['rəy_count'].sum()) * 100).round(1)
+st.write(f""">Qrafikdən aydın olur ki, məlumat daxilində əksərən <strong style='color: purple;'>{new[new['rəy_count'] == new['rəy_count'].max()]['rəy_tarix_year'].values[0]} ({new['rəy_count'].max()} , {percentage}%)</strong> ilinə aid qeydlər mövcuddur.""", unsafe_allow_html=True)
 
 # ---
 
