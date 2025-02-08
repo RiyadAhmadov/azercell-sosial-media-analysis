@@ -469,7 +469,7 @@ values = week_mean.values.round(2)
 fig4 = create_bar_chart_head1(weekdays, values, 'Həftə Üzrə Paylaşılan Post Sayının Ortalaması', 'Həftənin Günü', 'Post Sayının Ortalaması')
 st.plotly_chart(fig4)
 
-st.write(f""">Qrafikdən aydın olur ki, həftə sonuna yaxınlaşdıqca <strong style='color: purple;'>(1-5)</strong> günlərində paylaşılan post sayının ortalamasında azalma müşahidə edilir.""", unsafe_allow_html=True)
+st.write(f""">Qrafikdən aydın olur ki, həftə sonuna yaxınlaşdıqca <strong style='color: purple;'>(1-5)</strong> paylaşılan post sayının ortalamasında azalma müşahidə edilir.""", unsafe_allow_html=True)
 
 # ---
 
@@ -487,7 +487,7 @@ week_mean = week_mean.groupby(by='week_type')['post_şəkil'].mean()
 weekdays = week_mean.index
 values = week_mean.values.round(2)
 
-fig5 = create_bar_chart_head1(weekdays, values, 'Həftə Üzrə Paylaşılan Post Sayısının Ortalaması', 'Həftə İçi/ Həftə Sonu', 'Post Sayısının Ortalaması')
+fig5 = create_bar_chart_head1(weekdays, values, 'Həftə Üzrə Paylaşılan Post Sayının Ortalaması', 'Həftə İçi/ Həftə Sonu', 'Post Sayının Ortalaması')
 st.plotly_chart(fig5)
 
 st.write(f""">Qrafikdən aydın olur ki, <strong style='color: purple;'>həftə içi və həftə sonu</strong> günlər üzrə paylaşılan post sayının ortalamasında nəzərəçarpan fərq yoxdur.""", unsafe_allow_html=True)
@@ -530,7 +530,7 @@ new = filtered_data.groupby(by=['rəy_tarix_year', 'rəy_tarix_month']).agg(rəy
 monthly_mean = new.groupby(by = 'rəy_tarix_month')['rəy_count'].mean()
 months = monthly_mean.index
 values = monthly_mean.values.round(2)
-fig10 = create_bar_chart_head1(months, values, 'Aylar Üzrə İzləyicilərin Rəy Sayısının Ortalaması', 'Ay', 'Rəy Sayısının Ortalaması')
+fig10 = create_bar_chart_head1(months, values, 'Aylar Üzrə İzləyicilərin Rəy Sayının Ortalaması', 'Ay', 'Rəy Sayının Ortalaması')
 st.plotly_chart(fig10)  
 
 # ---
@@ -546,7 +546,7 @@ fig11 = px.pie(new, values='rəy_count', names='rəy_tarix_year',
 fig11.update_layout(title_font=dict(size=24))
 st.plotly_chart(fig11)
 
-st.write(f""">Qrafikdən aydın olur ki, məlumat daxilində əksərən <strong style='color: purple;'>2022 (29.8%)</strong> ilinə aid qeydlər mövcuddur.""", unsafe_allow_html=True)
+st.write(f""">Qrafikdən aydın olur ki, məlumat daxilində əksərən <strong style='color: purple;'>f'{new[new['rəy_count'] == new['rəy_count'].max()]['rəy_tarix_year']}' f'{new['rəy_count'].max()}'</strong> ilinə aid qeydlər mövcuddur.""", unsafe_allow_html=True)
 
 # ---
 
@@ -559,7 +559,7 @@ new = filtered_data.groupby(by=['rəy_tarix_year', 'rəy_tarix_month','rəy_day_
 week_mean = new.groupby(by = 'rəy_day_name')['rəy_count'].mean()
 weekdays = week_mean.index
 values = week_mean.values.round(2)
-fig12 = create_bar_chart_head1(weekdays, values, 'Həftə Üzrə İzləyicilərin Rəy Sayısının Ortalaması', 'Həftənin Günü', 'Rəy Sayının Ortalaması')
+fig12 = create_bar_chart_head1(weekdays, values, 'Həftə Üzrə İzləyicilərin Rəy Sayının Ortalaması', 'Həftənin Günü', 'Rəy Sayının Ortalaması')
 st.plotly_chart(fig12)
 
 st.write(f""">Qrafikdən görünür ki, həftəiçi günlərdə <strong style='color: purple;'>(1-5)</strong> istifadəçilər rəy yazmağa daha çox meylli olurlar. 
@@ -581,7 +581,7 @@ week_mean = week_mean.groupby(by='week_type')['rəy_count'].mean()
 weekdays = week_mean.index
 values = week_mean.values.round(2)
 
-fig13 = create_bar_chart_head(weekdays, values, 'Həftə Üzrə İzləyicilərin Rəy Sayısının Ortalaması', 'Həftə İçi/Sonu', 'Rəy Sayısının Ortalaması')
+fig13 = create_bar_chart_head(weekdays, values, 'Həftə Üzrə İzləyicilərin Rəy Sayının Ortalaması', 'Həftə İçi/Həftə Sonu', 'Rəy Sayının Ortalaması')
 st.plotly_chart(fig13)
 
 st.write(f""">Bu qrafikdən aydın görünür ki, həftəiçi günlərdə <strong style='color: purple;'>(1-5)</strong> istifadəçilər daha çox rəy yazırlar.""", unsafe_allow_html=True)
@@ -600,7 +600,7 @@ fig6 = create_line_chart(time_counts.index, time_counts.values, 'Zaman Üzrə Pa
 st.plotly_chart(fig6)
 
 st.write(f""">Bu qrafikdən aydın görünür ki, postlar adətən <strong style='color: purple;'>səhər saatlarında</strong> və 
-<strong style='color: purple;'>axşam (iş çıxışı)</strong> saatlarında paylaşılır. (Təbii ki, burada həftənin günü və həftə içi/sonu faktoru da rol oynayır.)""", unsafe_allow_html=True)
+<strong style='color: purple;'>axşam (iş çıxışı)</strong> saatlarında paylaşılır. (Təbii ki, burada həftənin günü, həftə içi və həftə sonu faktoru da rol oynayır.)""", unsafe_allow_html=True)
 
 # --- 
 
@@ -638,7 +638,7 @@ new['Tarix'] = new['rəy_tarix_year'].astype(str) + "-" + new['rəy_tarix_month'
 weekdays = new['Tarix']
 values = new['hesab_adı']
 
-fig13 = create_bar_chart_short(weekdays, values, 'Tarix Üzrə Unikal Hesab Sayısı', 'Tarix', 'Unikal Hesab Sayı')
+fig13 = create_bar_chart_short(weekdays, values, 'Tarix Üzrə Unikal Hesab Sayı', 'Tarix', 'Unikal Hesab Sayı')
 st.plotly_chart(fig13)
 
 # --- 
@@ -655,7 +655,7 @@ new['Kumulativ_Hesab_Sayı'] = new['hesab_adı'].cumsum()
 tarixlər = new['Tarix']
 kumulativ_dəyərlər = new['Kumulativ_Hesab_Sayı']
 
-fig14 = create_line_chart_head(tarixlər, kumulativ_dəyərlər, 'Tarix Üzrə Kumulativ Unikal Hesab Sayısı', 'Tarix', 'Kumulativ Unikal Hesab Sayı')
+fig14 = create_line_chart_head(tarixlər, kumulativ_dəyərlər, 'Tarix Üzrə Kumulativ Unikal Hesab Sayı', 'Tarix', 'Kumulativ Unikal Hesab Sayı')
 st.plotly_chart(fig14)
 
 # --- 
