@@ -8,6 +8,18 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 
+if "logged_in" not in st.session_state or not st.session_state.logged_in:
+    st.markdown(
+        """
+        <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+            <img src="https://tezbazar.az/uploads/news/1683015744925786450c8403229c.png" width="450">
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.warning("Xahiş olunur, giriş edin!")
+    st.stop()
+
 st.set_page_config(page_title="📊Dashboard", layout="centered")
 
 df = pd.read_excel(r'azercell/azercell_app/azercell_instagram_customer_reviews.xlsx')
