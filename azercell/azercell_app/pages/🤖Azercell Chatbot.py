@@ -6,10 +6,21 @@ import re
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Sidebar Logo
+
+if "logged_in" not in st.session_state or not st.session_state.logged_in:
+    st.markdown(
+        """
+        <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+            <img src="https://tezbazar.az/uploads/news/1683015744925786450c8403229c.png" width="450">
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.warning("Xahiş olunur, giriş edin!")
+    st.stop()
+
 st.sidebar.image("https://www.azercell.com/assets/images/services/aicell/webpage_twosided_564x566_aicell.png", use_container_width=True)
 
-# Header with Image
 st.markdown(
     """
     <div style="display: flex; align-items: center; justify-content: center;">
