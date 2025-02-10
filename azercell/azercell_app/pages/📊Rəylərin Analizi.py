@@ -17,7 +17,7 @@ if "logged_in" not in st.session_state or not st.session_state.logged_in:
         """,
         unsafe_allow_html=True,
     )
-    st.warning("Xahiş olunur, giriş edin!")
+    st.warning("Xahiş olunur, ana səhifədən giriş edin!")
     st.stop()
 
 st.set_page_config(page_title="📊Dashboard", layout="centered")
