@@ -196,7 +196,7 @@ def main_page():
     st.markdown("---")
     st.write("💡 Daha ətraflı məlumat üçün layihə sənədlərinə baxın və ya əlaqə saxlayın.")
     st.write("📧 Email: [riyadehmedov03@gmail.com](mailto:riyadehmedov03@gmail.com)")
-    st.write("📞 Telefon: +994 55 551-98-18
+    st.write("📞 Telefon: +994 55 551-98-18")
 
 if not st.session_state.logged_in:
     login_page()
